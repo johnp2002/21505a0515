@@ -22,7 +22,7 @@ function WithHeaderStyledExample(props) {
             AC Seat Price : {props.info.price.AC}
         </Badge>
         <Badge bg="warning" text="dark">
-            AC Seat Price : {props.info.price.sleeper}
+            Sleeper Seat Price : {props.info.price.sleeper}
         </Badge>
         </Stack>
         </Card.Title>
