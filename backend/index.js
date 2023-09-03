@@ -8,6 +8,13 @@ app.get('/trains',(req,res)=>{
     res.end()
 })
 
+app.get('/trains/:tNum',(req,res)=>{
+    console.log(req.params.tNum)
+    const t = data.filter(data=> data.trainNumber == req.params.tNum)
+    res.json(t);
+    res.end()
+})
+
 app.listen(port,(err)=>{
     if(err){
         console.log("Server starting failed");
