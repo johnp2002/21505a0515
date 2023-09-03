@@ -25,6 +25,12 @@ function WithHeaderStyledExample(props) {
             Sleeper Seat Price : {props.info.price.sleeper}
         </Badge>
         </Stack>
+        <br/>
+        <Stack className='cen' direction="horizontal"  gap={2}>
+            <Badge bg="warning" text="dark">
+            Depature Time : { props.info.departureTime.Hours} hours Left
+        </Badge>
+        </Stack>
         </Card.Title>
         <Card.Text>
          Train Delayed By {props.info.delayedBy} Hours
