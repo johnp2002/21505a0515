@@ -13,6 +13,7 @@ function App(){
   const [isLoad,setLoad] = React.useState(false);
 
   React.useEffect(() => {
+    // fetching Trains data from api for useeffect hook to fetch
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
@@ -34,9 +35,8 @@ function App(){
       return (
       <div className="App">
          <Card.Header as="h5" className="title">JTrains Systems</Card.Header>
-        {/* <WithHeaderStyledExample /> */}
-        {/* <WithHeaderStyledExample /> */}
         {isLoad?<WithHeaderStyledExample info = {one}  />:
+        // rendering that trains datas passing as props
         trains.map((e)=>{
             return (
             <WithHeaderStyledExample info = {e} f={setOne} l={setLoad} />

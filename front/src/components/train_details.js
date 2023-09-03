@@ -9,19 +9,23 @@ function WithHeaderStyledExample(props) {
       <Card.Header as="h5"></Card.Header>
       
       <Card.Body>
+        {/* train name and train number  element */}
         <Card.Title className='hd'>{props.info.trainName} <Badge bg="secondary">Train No:{props.info.trainNumber}</Badge> </Card.Title>
         <Card.Title>
     
         <Stack className='cen' direction="vertical"  gap={2}>
+            {/* seat availabilty of trains */}
       <Badge bg="danger">Seat Availability : AC : {props.info.seatsAvailable.AC} </Badge><Badge bg="danger">Seat Availability : Sleeper : {props.info.seatsAvailable.sleeper}</Badge>
       
         </Stack>
         <br/>
         <Stack className='cen' direction="horizontal"  gap={2}>
             <Badge bg="warning" text="dark">
+                {/* sleeper seat price  element`` */}
             AC Seat Price : {props.info.price.AC}
         </Badge>
         <Badge bg="warning" text="dark">
+            {/* ac seat price element`` */}
             Sleeper Seat Price : {props.info.price.sleeper}
         </Badge>
         </Stack>
