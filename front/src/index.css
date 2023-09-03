@@ -22,3 +22,8 @@ code {
   position: sticky;
   top: 10;
 }
+.cont{
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+}

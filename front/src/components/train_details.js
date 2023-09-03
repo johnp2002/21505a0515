@@ -5,7 +5,7 @@ import Stack from 'react-bootstrap/Stack';
 
 function WithHeaderStyledExample(props) {
   return (
-    <Card>
+    <Card className='cont'>
       <Card.Header as="h5"></Card.Header>
       
       <Card.Body>
@@ -29,7 +29,7 @@ function WithHeaderStyledExample(props) {
         <Card.Text>
          Train Delayed By {props.info.delayedBy} Hours
         </Card.Text>
-        <Button variant="primary">Show More</Button>
+        <Button onClick={()=>{props.f(); props.l()}} variant="primary">Show More</Button>
       </Card.Body>
     </Card>
   );

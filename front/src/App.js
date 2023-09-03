@@ -36,10 +36,10 @@ function App(){
          <Card.Header as="h5" className="title">JTrains Systems</Card.Header>
         {/* <WithHeaderStyledExample /> */}
         {/* <WithHeaderStyledExample /> */}
-        {isLoad?<trainInfo info = {one} />:
+        {isLoad?<WithHeaderStyledExample info = {one}  />:
         trains.map((e)=>{
             return (
-            <WithHeaderStyledExample info = {e} />
+            <WithHeaderStyledExample info = {e} f={setOne} l={setLoad} />
           );})}
       </div>
     );
