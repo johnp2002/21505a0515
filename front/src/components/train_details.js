@@ -12,14 +12,18 @@ function WithHeaderStyledExample(props) {
         <Card.Title>{props.info.trainName} <Badge bg="secondary">Train No:{props.info.trainNumber}</Badge> </Card.Title>
         <Card.Title>
     
-        <Stack className='cen' direction="horizontal"  gap={2}>
+        <Stack className='cen' direction="vertical"  gap={2}>
       <Badge bg="danger">Seat Availability : AC : {props.info.seatsAvailable.AC} </Badge><Badge bg="danger">Seat Availability : Sleeper : {props.info.seatsAvailable.sleeper}</Badge>
-      <Badge bg="warning" text="dark">
-        AC Seat Price : {props.info.price.AC}
-      </Badge>
-      <Badge bg="warning" text="dark">
-        AC Seat Price : {props.info.price.sleeper}
-      </Badge>
+      
+        </Stack>
+        <br/>
+        <Stack className='cen' direction="horizontal"  gap={2}>
+            <Badge bg="warning" text="dark">
+            AC Seat Price : {props.info.price.AC}
+        </Badge>
+        <Badge bg="warning" text="dark">
+            AC Seat Price : {props.info.price.sleeper}
+        </Badge>
         </Stack>
         </Card.Title>
         <Card.Text>
