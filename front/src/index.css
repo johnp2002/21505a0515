@@ -26,4 +26,18 @@ code {
   max-width: 600px;
   margin: auto;
   margin-top: 50px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+@media (max-width:550px) {
+  .cont{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .btn{
+    width: 100%;
+  }
+  .hd{
+    font-size: 5rem;
+  }
 }

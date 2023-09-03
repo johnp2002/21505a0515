@@ -9,7 +9,7 @@ function WithHeaderStyledExample(props) {
       <Card.Header as="h5"></Card.Header>
       
       <Card.Body>
-        <Card.Title>{props.info.trainName} <Badge bg="secondary">Train No:{props.info.trainNumber}</Badge> </Card.Title>
+        <Card.Title className='hd'>{props.info.trainName} <Badge bg="secondary">Train No:{props.info.trainNumber}</Badge> </Card.Title>
         <Card.Title>
     
         <Stack className='cen' direction="vertical"  gap={2}>
@@ -29,7 +29,7 @@ function WithHeaderStyledExample(props) {
         <Card.Text>
          Train Delayed By {props.info.delayedBy} Hours
         </Card.Text>
-        <Button onClick={()=>{props.f(); props.l()}} variant="primary">Show More</Button>
+        <Button className='btn' onClick={()=>{props.f(); props.l()}} variant="primary">Show More</Button>
       </Card.Body>
     </Card>
   );
