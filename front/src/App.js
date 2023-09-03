@@ -1,37 +1,26 @@
-import React from 'react';
+import axios from "axios";
+import React from "react";
+
 import './App.css';
 import WithHeaderStyledExample from './components/train_details.js';
+const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      items: []
-    };
-  }
-  componentDidMount() {
-      fetch(
-  "https://api.example.com/items")
-          .then((res) => res.json())
-          .then((json) => {
-              this.setState({
-                  items: json,
-                  DataisLoaded: true
-              });
-          })
-          console.log(this.state)
-  }
-  render(){
-    
+function App(){
+  const [post, setPost] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+      console.log(post)
+    });
+  }, []);
       return (
       <div className="App">
         <WithHeaderStyledExample />
         <WithHeaderStyledExample />
       </div>
     );
-  }
+  
 }
 
 export default App;
