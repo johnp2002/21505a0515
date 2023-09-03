@@ -6,18 +6,34 @@ import WithHeaderStyledExample from './components/train_details.js';
 const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
 
 function App(){
-  const [post, setPost] = React.useState(null);
+  const [trains, getTrains] = React.useState([]);
 
   React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-      console.log(post)
+    let config = {
+      method: 'get',
+      maxBodyLength: Infinity,
+      url: 'http://localhost:5000/trains',
+      headers: { }
+    };
+    
+    axios.request(config)
+    .then((response) => {
+      console.log(response.data);
+      getTrains(response.data)
+    })
+    .catch((error) => {
+      console.log(error);
     });
+    
   }, []);
       return (
       <div className="App">
-        <WithHeaderStyledExample />
-        <WithHeaderStyledExample />
+        {/* <WithHeaderStyledExample /> */}
+        {/* <WithHeaderStyledExample /> */}
+        {trains.map((e)=>{
+            return (
+            <WithHeaderStyledExample info = {e}/>
+          );})}
       </div>
     );
   

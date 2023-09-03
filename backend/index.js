@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const data = require('./temp.json')
+const cors = require('cors');
 
+app.use(cors({
+    origin: '*'
+}));
 app.get('/trains',(req,res)=>{
     res.json(data);
     res.end()
